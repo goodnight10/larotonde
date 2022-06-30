@@ -56,46 +56,43 @@
 /* 슬라이드================================= */
 
 .sc-slide {
-    padding: 100px 0 120px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+
 }
 
-.sc-slide .main-slide {
+.sc-slide .visual-area {
     position: relative;
-    /* height: 600px;  */
-    /* width: 600px;
-    border-radius: 50%; */
+    /* background: #f00; */
+    width: 100%;
+    padding: 0 50px;
 }
-
-.sc-slide .swiper-wrapper {}
-
-.sc-slide .swiper-slide {
-    position: relative;
-}
-
-.sc-slide .swiper-slide video {
+.sc-slide .visual-area .visual-list{
     height: 600px;
-    width: 600px;
+    margin-left: 30%;
+    position: relative;
+}
+
+.sc-slide .visual-area .visual-item{
+    height: 600px; width: 600px;
+    overflow: hidden;
     border-radius: 50%;
-}
-
-.sc-slide .swiper-slide .num0 {
     position: absolute;
-    left: 500px;
-
-
+    opacity: 0.5;
+}
+.sc-slide .visual-area .visual-item.active{
+    opacity: 1;
 }
 
-.sc-slide .swiper-slide .num1 {
-    position: absolute;
-    left: 600px;
-
+.sc-slide .visual-area video {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
 }
 
-.sc-slide .swiper-slide .num2 {
-    position: absolute;
-    left: 700px;
-
-}
 
 .sc-slide .controller {
     position: absolute;
@@ -120,7 +117,13 @@
 
 .sc-slide .btn.next {}
 
-.sc-slide .desc-area {}
+.sc-slide .desc-area {
+    position: absolute;
+    height: 600px;
+    width: 50%;
+    pointer-events: none;
+    z-index: 10;
+}
 
 .sc-slide .desc-area .date {
     font-size: 13px;
@@ -128,12 +131,29 @@
 }
 
 .sc-slide .desc-area .title {
-    font-size: 60px;
+    margin: 40px 0 60px;
     display: block;
-    padding: 40px 0 60px;
+    
+}
+.sc-slide .desc-area .title h3 {
+    font-size: 60px;
+    padding: 20px 0;
 }
 
-.sc-slide .desc-area .desc {}
+.sc-slide .desc-area .desc-wrap {
+    position: absolute;
+    top: 50%;left: 0;
+    transform: translateY(-50%);
+    left: 50px;
+    
+}
+/* .sc-slide .desc-area .desc-wrap.active {} */
+.sc-slide .desc-area .hide {
+    overflow: hidden;
+}
+.sc-slide .desc-area .hide-el {
+    transform: translateY(110%);
+}
 
 .sc-slide .desc-area .btn-wrap {
     padding-top: 60px;

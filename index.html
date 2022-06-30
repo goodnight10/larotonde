@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./asset/css/layout.css">
     <link rel="stylesheet" href="./asset/css/main.css">
-
     <script src="./asset/js/jquery-1.12.4.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script defer src="./asset/js/custom.js"></script>
 </head>
 
@@ -20,7 +20,6 @@
     <header class="header">
         <h1 class="logo">
             <a href="" class="link-logo">
-                <img src="./asset/images/logo.png" alt="la rotonde" class="logo-img">
                 <span class="title">la rotonde</span>
             </a>
         </h1>
@@ -35,12 +34,12 @@
                             <label for="search" class="blind">키워드</label>
                             <input class="" type="text" id="search" placeholder="Rechercher">
                         </div>
-                        <button class=""><span class="blind">검색 버튼</span></button>
+                        <button class="btn-sub"><span class="blind">검색 버튼</span></button>
                     </fieldset>
                 </form>
             </div>
             <!-- 메뉴 -->
-            <a href="" class="link-menu"><span class="menu-txt">Menu</span></a>
+            <a href="" class="link-menu btn-menu"><span class="menu-txt">Menu</span></a>
             <div class="menu-pop">
                 <div class="pop-area">
                     <nav>
@@ -51,20 +50,20 @@
                             <li class="gnb-item"><a href="" class="link-gnb">LIEUX DE DIFFUSION</a></li>
                         </ul>
                         <ul class="gnb-list2">
-                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="gnb-txt">À propos</span></a></li>
-                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="gnb-txt">Soutien aux artistes</span></a></li>
-                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="gnb-txt">Scolaire</span></a></li>
-                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="gnb-txt">Arrière scène</span></a></li>
+                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="line">À propos</span></a></li>
+                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="line">Soutien aux artistes</span></a></li>
+                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="line">Scolaire</span></a></li>
+                            <li class="gnb-item2"><a href="" class="link-gnb2"><span class="line">Arrière scène</span></a></li>
                         </ul>
                     </nav>
 
                     <div class="contect-area">
                         <address class="addr-box">
                             <p class="add">
-                                <a href="" class="link-contect"><span class="gnb-txt">336, rue du Roi, bureau 100<br>Québec (Québec) G1K 2W5</span></a>
+                                <a href="" class="link-contect"><span class="line">336, rue du Roi, bureau 100<br>Québec (Québec) G1K 2W5</span></a>
                             </p>
-                            <p class="call"><a href="tel:070-7733-5741" class="link-contect"><span class="gnb-txt">418 649-5013</span></a></p>
-                            <p class="mail"><a href="mailto:info@larotonde.qc.ca" class="link-contect"><span class="gnb-txt">info@larotonde.qc.ca</span></a></p>
+                            <p class="call"><a href="tel:070-7733-5741" class="link-contect"><span class="line">418 649-5013</span></a></p>
+                            <p class="mail"><a href="mailto:info@larotonde.qc.ca" class="link-contect"><span class="line">info@larotonde.qc.ca</span></a></p>
                         </address>
                         <div class="sns-box">
                             <a href="" class="link-sns facebook"><span class="blind">페이스북</span></a>
@@ -82,19 +81,20 @@
     <main class="container">
         <section class="sc-slide">
             <h2 class="blind">작품소개 슬라이드</h2>
-            <div class="swiper main-slide">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide num0">
+
+            <div class="visual-area">
+                <div class="visual-list">
+                    <div class="visual-item" data-index="3">
                         <video data-video="0" autoplay="" playsinline="" muted="" loop="" poster="https://www.larotonde.qc.ca/app/uploads/2019/05/Le-probleme-avec-le-rose_Jean-Charles-Verchere_5-560x373.jpg">
-                            <source class="num0" src="https://www.larotonde.qc.ca/app/uploads/2021/08/Accueil-Problème.mov">
+                            <source class="num0" src="https://www.larotonde.qc.ca/app/uploads/2021/08/Accueil-Problème.mov">
                         </video>
                     </div>
-                    <div class="swiper-slide num1">
+                    <div class="visual-item" data-index="2">
                         <video data-video="1" playsinline="" muted="" loop="" poster="https://www.larotonde.qc.ca/app/uploads/2019/05/les-corps-avales-par-david-wong-1-560x373.jpg">
-                            <source class="num1" src="https://www.larotonde.qc.ca/app/uploads/2019/05/Teaser-Les-corps-avalés-Raccourci-Accueil-site-web.mp4">
+                            <source class="num1" src="https://www.larotonde.qc.ca/app/uploads/2019/05/Teaser-Les-corps-avalés-Raccourci-Accueil-site-web.mp4">
                         </video>
                     </div>
-                    <div class="swiper-slide num2">
+                    <div class="visual-item" data-index="1">
                         <video data-video="2" playsinline="" muted="" loop="" poster="https://www.larotonde.qc.ca/app/uploads/2022/05/paysages-de-papier-estelle-clareton-oregami-web-560x373.jpg">
                             <source class="num2" src="https://www.larotonde.qc.ca/app/uploads/2022/05/Teaser_Paysages_de_papier_raccourci.mp4">
                         </video>
@@ -106,35 +106,44 @@
                     <a href="" class="btn next"><span class="blind">다음</span></a>
                 </div>
             </div>
+
             <div class="desc-area">
-                <div class="desc-wrap num0">
-                    <p class="date">12 au 19 juin 2022</p>
-                    <h3 class="title">LE PROBLEME AVEC LE ROSE</h3>
-                    <span class="desc">LE PROBLEME AVEC LE ROSE LE PROBLEME AVEC LE ROSE</span>
-                    <div class="btn-wrap">
-                        <a href="" class="link-btn"><span class="btn-desc">En savoir plus</span></a>
-                        <a href="" class="link-btn black"><span class="btn-desc black">Programmation complète</span></a>
+                <div class="desc-wrap">
+                    <div class="hide"><p class="hide-el date">12 au 19 juin 2022</p></div>
+                    <div class="hide title"><h3 class="hide-el">111LE PROBLEME AVEC LE ROSE</h3></div>
+                    <div class="hide"><p class="hide-el desc">LE PROBLEME AVEC LE ROSE LE PROBLEME AVEC LE ROSE</p></div>
+                    <div class="hide">
+                        <div class="hide-el btn-wrap">
+                            <a href="" class="link-btn"><span class="btn-desc">En savoir plus</span></a>
+                            <a href="" class="link-btn black"><span class="btn-desc black">Programmation complète</span></a>
+                        </div>
                     </div>
                 </div>
-                <div class="desc-wrap num1">
-                    <p class="date">12 au 19 juin 2022</p>
-                    <h3 class="title">LE PROBLEME AVEC LE ROSE</h3>
-                    <p class="desc">LE PROBLEME AVEC LE ROSE LE PROBLEME AVEC LE ROSE</p>
-                    <div class="btn-wrap">
-                        <a href="" class="link-btn"><span class="btn-desc">En savoir plus</span></a>
-                        <a href="" class="link-btn black"><span class="btn-desc black">Programmation complète</span></a>
+                <div class="desc-wrap">
+                    <div class="hide"><p class="hide-el date">12 au 19 juin 2022</p></div>
+                    <div class="hide title"><h3 class="hide-el">222LE PROBLEME AVEC LE ROSE</h3></div>
+                    <div class="hide"><p class="hide-el desc">LE PROBLEME AVEC LE ROSE LE PROBLEME AVEC LE ROSE</p></div>
+                    <div class="hide">
+                        <div class="hide-el btn-wrap">
+                            <a href="" class="link-btn"><span class="btn-desc">En savoir plus</span></a>
+                            <a href="" class="link-btn black"><span class="btn-desc black">Programmation complète</span></a>
+                        </div>
                     </div>
                 </div>
-                <div class="desc-wrap num2">
-                    <p class="date">12 au 19 juin 2022</p>
-                    <h3 class="title">LE PROBLEME AVEC LE ROSE</h3>
-                    <span class="desc">LE PROBLEME AVEC LE ROSE LE PROBLEME AVEC LE ROSE</span>
-                    <div class="btn-wrap">
-                        <a href="" class="link-btn"><span class="btn-desc">En savoir plus</span></a>
-                        <a href="" class="link-btn black"><span class="btn-desc black">Programmation complète</span></a>
+                <div class="desc-wrap">
+                    <div class="hide"><p class="hide-el date">12 au 19 juin 2022</p></div>
+                    <div class="hide title"><h3 class="hide-el">333LE PROBLEME AVEC LE ROSE</h3></div>
+                    <div class="hide"><p class="hide-el desc">LE PROBLEME AVEC LE ROSE LE PROBLEME AVEC LE ROSE</p></div>
+                    <div class="hide">
+                        <div class="hide-el btn-wrap">
+                            <a href="" class="link-btn"><span class="btn-desc">En savoir plus</span></a>
+                            <a href="" class="link-btn black"><span class="btn-desc black">Programmation complète</span></a>
+                        </div>
                     </div>
                 </div>
+                
             </div>
+
         </section>
 
         <div class="common-inner">
@@ -199,8 +208,6 @@
                     <a href="" class="link-btn"><span class="btn-desc">À propos de la rotonde</span></a>
                 </div>
                 <h3 class="title bottom">CRÉATIVITÉ</h3>
-            </div>
-            <div class="house-bg-area">
                 <figure class="pic1">
                     <img src="./asset/images/1.jpg" alt="Sébastien Durocher">
                     <figcaption>Sébastien Durocher</figcaption>
@@ -231,6 +238,8 @@
                     <figcaption>Sébastien Durocher</figcaption>
                     <i class="camera"></i>
                 </figure>
+            </div>
+            <div class="house-bg-area">
             </div>
         </section>
 
