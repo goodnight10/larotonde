@@ -98,9 +98,9 @@ $(function () {
      */
 
     $('.camera').hover(function () {
-        $('figcaption').addClass('active');
+        $(this).prev('figcaption').addClass('active');
     }, function () {
-        $('figcaption').removeClass('active');
+        $(this).prev('figcaption').removeClass('active');
     })
 
 

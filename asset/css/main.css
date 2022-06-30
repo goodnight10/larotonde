@@ -26,21 +26,30 @@
     margin-right: 10px;
 }
 
-.link-btn:hover::after {
+.link-btn::after {
     height: 28px;
     width: 28px;
     content: '';
     display: inline-block;
     background: url(../images/search.png);
     margin-left: 10px;
-    
     transition: .5s;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+.link-btn:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+.link-btn .btn-desc{
+    transition: 0.3s;
+    transform: translateX(20px);
+}
+.link-btn:hover .btn-desc{
+    transform: translateX(-10px);
 }
 
-.btn-desc:hover {
-    margin-left: -15px;
-    
-}
 
 .btn-desc {
     font-weight: 500;
@@ -61,7 +70,6 @@
     align-items: center;
     max-width: 1920px;
     margin: 0 auto;
-
 }
 
 .sc-slide .visual-area {
@@ -75,23 +83,24 @@
     margin-left: 30%;
     position: relative;
 }
-
-.sc-slide .visual-area .visual-item{
-    height: 600px; width: 600px;
-    overflow: hidden;
+.sc-slide .visual-area .visual-item {
+    height: 600px;
+    width: 600px;
     border-radius: 50%;
+    overflow: hidden;
     position: absolute;
     opacity: 0.5;
 }
+
 .sc-slide .visual-area .visual-item.active{
     opacity: 1;
 }
 
-.sc-slide .visual-area video {
-    width: 100%; 
-    height: 100%;
+.sc-slide .visual-area video{
+    width: 100%;height: 100%;
     object-fit: cover;
 }
+
 
 
 .sc-slide .controller {
@@ -120,44 +129,27 @@
 .sc-slide .desc-area {
     position: absolute;
     height: 600px;
+    /* background: #00f; */
+    /* width: 100%; */
     width: 50%;
     pointer-events: none;
     z-index: 10;
 }
+.sc-slide .desc-area .desc-wrap {position: absolute;top: 0;left: 50px;top: 50%;transform: translateY(-50%);}
+.sc-slide .desc-area .hide{overflow: hidden;}
+.sc-slide .desc-area .hide-el{transform: translateY(110%);}
+
+/* .sc-slide .desc-area .desc-wrap.active{} */
 
 .sc-slide .desc-area .date {
     font-size: 13px;
-
 }
 
-.sc-slide .desc-area .title {
-    margin: 40px 0 60px;
-    display: block;
-    
-}
-.sc-slide .desc-area .title h3 {
-    font-size: 60px;
-    padding: 20px 0;
-}
+.sc-slide .desc-area .title {margin: 40px 0 6px;}
+.sc-slide .desc-area .title h3{font-size: 60px;padding: 20px 0;}
 
-.sc-slide .desc-area .desc-wrap {
-    position: absolute;
-    top: 50%;left: 0;
-    transform: translateY(-50%);
-    left: 50px;
-    
-}
-/* .sc-slide .desc-area .desc-wrap.active {} */
-.sc-slide .desc-area .hide {
-    overflow: hidden;
-}
-.sc-slide .desc-area .hide-el {
-    transform: translateY(110%);
-}
+.sc-slide .desc-area .desc {}
 
-.sc-slide .desc-area .btn-wrap {
-    padding-top: 60px;
-}
 
 
 
@@ -213,6 +205,13 @@
     padding: 40px 0;
     border-bottom: 1px solid hsla(0, 0%, 100%, .4);
 }
+.sc-stage .stage-item:hover .link-image{
+    transform: scale(0.9);
+}
+.sc-stage .stage-item:hover .link-image img{
+    transform: scale(1.2);
+}
+
 
 .sc-stage .link-stage {}
 
@@ -225,38 +224,27 @@
 .sc-stage .st-title:hover {
     color: hsla(0, 0%, 100%, .4);
     margin-left: -20px;
-    
-
 }
 
 .sc-stage .date {
     font-size: 15px;
 }
 
-.sc-stage .link-image {}
+.sc-stage .link-image {
+    width: 375px;
+    height: 250px;
+    overflow: hidden;
+    transition: 0.3s;
+}
 
 .sc-stage img {
-    opacity: 0.2;
-    margin-left: 5rem;
-    display: inline-block;
-    box-sizing: border-box;
-    width: 375px;
-    height: 250px;
-    max-width: 25rem;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: center;
-    transition: .5s;
+    transition: 0.3s;
 
 }
 
-.sc-stage img:hover {
-    
-    transform: scale(1.1);
-    width: 375px;
-    height: 250px;
-    object-fit: cover;
-    opacity: 1;
-}
 
 .sc-stage .link-btn {
     margin-top: 40px;
@@ -272,17 +260,13 @@
 }
 
 .sc-round-house .house-area {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 100%;
+  
 
 }
 
 .sc-round-house .title {
     font-size: 5rem;
+    z-index: 5;
 }
 
 .sc-round-house .title.top {
@@ -298,7 +282,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    z-index: 5;
     max-width: 25rem;
     margin: 10rem auto 15rem;
     line-height: 30px;
@@ -316,9 +300,9 @@
 .sc-round-house figure {
     position: absolute;
     display: inline-block;
-    position: relative;
     overflow: hidden;
     margin: 0;
+    z-index: 2;
 }
 
 .sc-round-house img {
@@ -359,14 +343,14 @@
     width: 30%;
     padding-top: 20%;
     top: 50%;
-    left: 100%;
+    left: 700px;
 }
 
 .sc-round-house .pic5 {
     width: 43%;
     padding-top: 33%;
     top: 50%;
-    left: 0;
+    left: 20px;
 }
 
 .sc-round-house .pic6 {

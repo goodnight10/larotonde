@@ -117,6 +117,7 @@
     color: #101010;
     border: 1px solid #101010;
 }
+
 .header .menu-pop{
     opacity: 0;
     display: none;
@@ -134,8 +135,9 @@
     display: none;
     padding: 160px;
     color: #101010;
-
+    
 }
+
 /* .header .menu-pop.active{
     opacity: 1;
     display: block;
