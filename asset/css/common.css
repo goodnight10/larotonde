@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Gotham A';
+    src: url('../fonts/hatton-semibold-webfont.woff2') format('woff2');
+    font-weight: 600;
+}
+
+body{
+    color: #fff;
+    font-family: Gotham A,Gotham B,Helvetica,Arial,sans-serif;
+    background: #101010;
+    width: 100%;
+}
+
+.blind{
+    overflow: hidden;
+    position: absolute;
+    margin: -1px;
+    height: 1px; width: 1px;
+    clip: rect(0 0 0 0);
+}
+.common-inner{
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+}
