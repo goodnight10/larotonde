@@ -260,21 +260,23 @@
 }
 
 .sc-round-house .house-area {
-  
+    text-align: center;
 
 }
 
 .sc-round-house .title {
     font-size: 5rem;
-    z-index: 5;
+    z-index: 20;
+    opacity: 1;
+    display: inline-block;
 }
 
 .sc-round-house .title.top {
-    text-align: left;
+    
 }
 
 .sc-round-house .title.bottom {
-    text-align: right;
+    
 }
 
 .sc-round-house .desc {
@@ -282,20 +284,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    z-index: 20;
     max-width: 25rem;
     margin: 10rem auto 15rem;
     line-height: 30px;
+    opacity: 1;
 }
 
 .sc-round-house .link-btn {
     margin-top: 40px;
+    z-index: 20;
 }
 
-.sc-round-house .house-bg-area {
-    opacity: 0.5;
-    position: relative;
-}
+
 
 .sc-round-house figure {
     position: absolute;
@@ -306,6 +307,7 @@
 }
 
 .sc-round-house img {
+    z-index: 1;
     width: 100%;
     position: absolute;
     top: 0;
@@ -329,7 +331,7 @@
     width: 36%;
     padding-top: 20%;
     top: -5%;
-    left: 5%;
+    left: 500px;
 }
 
 .sc-round-house .pic3 {
@@ -343,21 +345,21 @@
     width: 30%;
     padding-top: 20%;
     top: 50%;
-    left: 700px;
+    right: 0;
 }
 
 .sc-round-house .pic5 {
-    width: 43%;
+    width: 35%;
     padding-top: 33%;
     top: 50%;
     left: 20px;
 }
 
 .sc-round-house .pic6 {
-    width: 33%;
+    width: 30%;
     padding-top: 30%;
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left:40%;
 }
 
 
