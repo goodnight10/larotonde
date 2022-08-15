@@ -27,24 +27,27 @@
 }
 
 .link-btn::after {
-    height: 28px;
-    width: 28px;
-    content: '';
+    content: '\f0a9';
     display: inline-block;
-    background: url(../images/search.png);
-    margin-left: 10px;
     transition: .5s;
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s;
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+color: #101010;
+font-size: 20px;
+
+
+    
 }
 .link-btn:hover::after {
     visibility: visible;
     opacity: 1;
 }
 .link-btn .btn-desc{
+    line-height: 25px;
     transition: 0.3s;
-    transform: translateX(20px);
+    transform: translateX(15px);
 }
 .link-btn:hover .btn-desc{
     transform: translateX(-10px);
@@ -89,11 +92,12 @@
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
 .sc-slide .visual-area .visual-item.active{
-    opacity: 1;
+    /* opacity: 1; */
+    z-index: 10;
 }
 
 .sc-slide .visual-area video{
@@ -137,7 +141,7 @@
 }
 .sc-slide .desc-area .desc-wrap {position: absolute;top: 0;left: 50px;top: 50%;transform: translateY(-50%);}
 .sc-slide .desc-area .hide{overflow: hidden;}
-.sc-slide .desc-area .hide-el{transform: translateY(110%);}
+.sc-slide .desc-area .hide-el{line-height: 52px; transform: translateY(110%);}
 
 /* .sc-slide .desc-area .desc-wrap.active{} */
 
@@ -269,6 +273,7 @@
     z-index: 20;
     opacity: 1;
     display: inline-block;
+    position: relative;
 }
 
 .sc-round-house .title.top {
@@ -299,6 +304,7 @@
 
 
 .sc-round-house figure {
+    position: relative;
     position: absolute;
     display: inline-block;
     overflow: hidden;
@@ -365,7 +371,6 @@
 
 .sc-round-house figcaption {
     display: block;
-    width: 100%;
     padding: 0.625rem 0.625rem 2.5rem;
     position: absolute;
     bottom: 0px;
@@ -383,13 +388,15 @@
 }
 
 .sc-round-house .camera{
-    height: 10px; width: 10px;
+    height: 15px; width: 15px;
     display: inline-block;
-    background: url(../images/search.png) no-repeat 100%;
-    background-position: cover;
+    background: url(../images/premium-icon-camera-5508720.png) no-repeat;
+    background-position: center; 
+    background-size:cover;
     position: absolute;
     bottom: 10px; left: 10px;
     z-index: 3;
+    opacity: 1;
 }
 
 

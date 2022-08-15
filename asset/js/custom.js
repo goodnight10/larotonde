@@ -3,26 +3,30 @@ $(function () {
 
 
     //구성용
-    //item ->el, item, tag,나 자신의 이름을 다 바꿀수 있음
-    $('.visual-item').each(function (index, item) {
+    //item ->이건 본인 마음이라 이름을 다 바꿀수 있음-자기자신이란 뜻.
+    //visual-item갯수만큼 실행한다(each)
+    $('.visual-item').each(function (index, item) { //순서index와 나item 자신을 받을수 있음.
         idx = $(this).data('index');
-        $(this).css({left: 200 * index,'z-index':idx})
+        $(this).css({left: 200 * index})
+
     })
 
     // let idx=0;
     $('.visual-item').click(function () {
-        idx = $(this).index();
-        // console.log(idx);
+        $('.video1').get(0).pause();
+        $('.video2').get(0).pause();
+        $(this).find('video').get(0).play();
+        //선택한 비디오 정지
 
-        // itemCnt=$('.visual-list . visual-item').length;
-        // $(this).css();
+        idx = $(this).index();
+        
         $(this).addClass('active').siblings().removeClass('active');
 
         //eq 선택 ,idx순서 가져올때 사용  
         item = $('.desc-wrap').eq(idx).find('.hide-el')
 
-        const all=gsap.to('.desc-wrap .hide-el', {y:'110%',paused: true,opacity:0})
-        const motion = gsap.to(item, {delay:0.5, y: 0,stagger: 0.1,paused: true,opacity:1})
+        const all=gsap.to('.desc-wrap .hide-el', {y:'110%',paused: true,'z-index':1})
+        const motion = gsap.to(item, {delay:0.5, y: 0,stagger: 0.1,paused: true,'z-index':2})
         all.play()
         motion.play()
     })
@@ -37,27 +41,23 @@ $(function () {
      * @since 2022-06-27
      * @author jy
      */
-    // $('.header .link-search').click(function (e) {
-    //     e.preventDefault();
-    //     $('.search-pop').toggleClass('active');
-    //     $('.link-search').toggleClass('active');
-    //     $('.link-menu').toggleClass('active');
-    //     if ($('.menu-pop').hasClass('active')) {
-    //         $('.menu-pop').removeClass('active')
-    //         menu.reverse()
-    //     } else {
-    //         $('.menu-pop').addClass('active')
-    //         menu.play()
-    //     }
+    $('.header .link-search').click(function (e) {
+        e.preventDefault();
+        $('.link-search').toggleClass('active');
 
+        if ($('.search-pop').hasClass('active')) {
+            $('.search-pop').removeClass('active')
+            search.reverse()
+        } else {
+            $('.search-pop').addClass('active')
+            search.play()
+        }
 
-    // })
+        
 
-    // menu = gsap.to('.header .menu-pop',{
-    //     opacity:1,
-    //     display:'block',
-    //     paused:true
-    // })
+    })
+
+    
 
     /**
      * 메뉴링크 여닫기
@@ -68,7 +68,6 @@ $(function () {
      */
     $('.header .link-menu').click(function (e) {
         e.preventDefault();
-        $('.link-search').toggleClass('active');
         $('.link-menu').toggleClass('active');
 
         if ($('.menu-pop').hasClass('active')) {
@@ -79,7 +78,15 @@ $(function () {
             menu.play()
         }
 
+        
 
+
+    })
+
+    search = gsap.to('.header .search-pop',{
+        opacity:1,
+        display:'block',
+        paused:true
     })
 
     menu = gsap.to('.header .menu-pop',{
@@ -103,19 +110,6 @@ $(function () {
         $(this).prev('figcaption').removeClass('active');
     })
 
-
-    // var swiper = new Swiper(".main-slide", {
-    //     slidesPerView:3,
-    //     // spaceBetween:-500,
-    //     // centeredSlides:true,
-    //     // loop:true,
-    //     resistance : false,
-    //     navigation: {
-    //         nextEl: ".main-slide .next",
-    //         prevEl: ".main-slide .prev",
-
-    //     },
-
     // });
     //gsap.from~전
     //gsap.to~후
@@ -126,7 +120,6 @@ $(function () {
             trigger:'.sc-season',
             start:"0% 80%",//트리거기준 0%위치, 윈도우기준0%
             end:"100% 80%",
-            markers:true,
             scrub:1,
         }
     })
@@ -150,8 +143,8 @@ $(function () {
     stage =gsap.timeline({
         scrollTrigger:{
             trigger:'.sc-stage',
-            start:"0% 90%",//트리거기준 0%위치, 윈도우기준0%
-            end:"100% 90%",
+            start:"0% 80%",//트리거기준 0%위치, 윈도우기준0%
+            end:"100% 80%",
             // markers:true,
             scrub:1,
         }
@@ -160,7 +153,7 @@ $(function () {
     //동시에 시행되도록 묶어줌
     stage.addLabel('motion2')
     
-    .from('.sc-stage>*',{
+    stage.from('.sc-stage>*',{
         y:10,
         opacity:0,
         stagger:0.3
@@ -169,7 +162,7 @@ $(function () {
     .from('.sc-stage .link-stage',{
         opacity:0,
         rotation:0,
-        x:100,
+        x:400,
     },'motion2')
 
     .from('.sc-stage .link-img',{
