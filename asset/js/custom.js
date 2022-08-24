@@ -47,9 +47,11 @@ $(function () {
 
         if ($('.search-pop').hasClass('active')) {
             $('.search-pop').removeClass('active')
+            $('body').removeClass('hidden')
             search.reverse()
         } else {
             $('.search-pop').addClass('active')
+            $('body').addClass('hidden')
             search.play()
         }
 
@@ -72,9 +74,11 @@ $(function () {
 
         if ($('.menu-pop').hasClass('active')) {
             $('.menu-pop').removeClass('active')
+            $('body').removeClass('hidden')
             menu.reverse()
         } else {
             $('.menu-pop').addClass('active')
+            $('body').addClass('hidden')
             menu.play()
         }
 
