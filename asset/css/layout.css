@@ -171,10 +171,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-.header nav{
-    
-}
-.header .gnb-list{}
+
 .header .gnb-item{
     position: relative;
     transition: .5s;
@@ -205,7 +202,6 @@
 .header .gnb-list2{
     display: flex;
 }
-.header .gnb-item2{}
 .header .link-gnb2{
     display: block;
     font-size: 18px;
@@ -216,16 +212,9 @@
 .header .txt{
     display: inline-block;
     transition: .5s;
-    /* transform: translateY(-1px); */
 }
-/* .header .gnb-list2 .link-gnb2:hover .txt{
-    transform: translateY(-20px);
-    border-bottom: 3px solid #000;
-} */
 
-.header .link-gnb2:hover::after{
-    
-}
+
 .header .contect-area{
     display: flex;
     justify-content: end;
@@ -243,7 +232,6 @@
 }
 .header .link-sns{
     background: url(../images/search.png) no-repeat 100%;
-    background-position: cover;
     height: 40px; width: 40px;
     margin-right: 10px;
 }
