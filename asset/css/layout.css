@@ -89,14 +89,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: 0;
     display: none;
     padding: 160px;
     opacity: 0;
 }
-/* .header .search-pop.active{
-    display: block;
-} */
+
 .header .search-pop fieldset{
     padding: 160px;
     display: flex;
@@ -156,7 +153,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: 0;
     display: none;
     padding: 160px;
     color: #101010;
