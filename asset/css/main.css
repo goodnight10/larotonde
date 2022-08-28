@@ -405,19 +405,7 @@
     visibility: visible;
 }
 
-.sc-round-house .camera {
-    height: 15px;
-    width: 15px;
-    display: inline-block;
-    background: url(../images/premium-icon-camera-5508720.png) no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 3;
-    opacity: 1;
-}
+
 
 
 /*  구독================================ */

@@ -189,11 +189,6 @@ $(function () {
     //동시에 시행되도록 묶어줌
     round.addLabel('motion3')
     
-    // round.from('.sc-round-house>*',{
-    //     y:10,
-    //     opacity:0,
-    //     stagger:0.3
-    // },'motion3')
     
     .from('.title.top',{
         opacity:1,
@@ -210,7 +205,7 @@ $(function () {
     .from('.pic1',{
         opacity:0,
         rotation:0,
-        x:-400,
+        x:-100,
     },'motion3')
 
     .from('.pic2',{
