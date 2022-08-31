@@ -137,7 +137,6 @@ $(function () {
             trigger:'.sc-stage',
             start:"0% 80%",//트리거기준 0%위치, 윈도우기준0%
             end:"100% 80%",
-            // markers:true,
             scrub:1,
         }
     })
@@ -153,13 +152,11 @@ $(function () {
     
     .from('.sc-stage .link-stage',{
         opacity:0,
-        rotation:0,
         x:400,
     },'motion2')
 
     .from('.sc-stage .link-img',{
         opacity:0,
-        rotation:0,
         y:100,
     },'motion2')
 
@@ -180,45 +177,37 @@ $(function () {
     
     .from('.title.top',{
         opacity:1,
-        rotation:0,
         x:-500,
     },'motion3')
 
     .from('.title.bottom',{
         opacity:1,
-        rotation:0,
         x:500,
     },'motion3')
 
     .from('.pic1',{
         opacity:0,
-        rotation:0,
         x:-100,
     },'motion3')
 
     .from('.pic2',{
         opacity:0,
-        rotation:0,
         x:-100,
     },'motion3')
     .from('.pic3',{
         opacity:0,
-        rotation:0,
         x:-300,
     },'motion3')
     .from('.pic4',{
         opacity:0,
-        rotation:0,
         x:-300,
     },'motion3')
     .from('.pic5',{
         opacity:0,
-        rotation:0,
         x:-100,
     },'motion3')
     .from('.pic6',{
         opacity:0,
-        rotation:0,
         x:-400,
     },'motion3')
 
