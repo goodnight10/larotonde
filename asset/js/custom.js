@@ -100,19 +100,7 @@ $(function () {
     })
 
 
-    /**
-     * 마우스 올리면 나타나기
-     *
-     * @version 1.0.0
-     * @since 2022-06-29
-     * @author jy
-     */
-
-    $('.camera').hover(function () {
-        $(this).prev('figcaption').addClass('active');
-    }, function () {
-        $(this).prev('figcaption').removeClass('active');
-    })
+   
 
     // });
     //gsap.from~전
